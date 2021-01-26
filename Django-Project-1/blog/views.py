@@ -1,5 +1,8 @@
-from django.http import HttpResponse
+# views blog
+from django.shortcuts import render
+
+# Create your views here.
 
 
 def index(request):
-    return HttpResponse("Hello worls. You're at the Blog Index")
+    return render(request, 'blog/blog.html')
