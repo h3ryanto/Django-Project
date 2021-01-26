@@ -1,7 +1,9 @@
 from django.http import HttpResponse
 
-def index (request):
+
+def index(request):
     return HttpResponse("Hello World! ini adalah halam index")
 
-def about (request):
+
+def about(request):
     return HttpResponse("Hello World! ini adalah halaman about")
