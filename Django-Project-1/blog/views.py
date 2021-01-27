@@ -5,9 +5,18 @@ from django.shortcuts import render
 
 
 def index(request):
-    contex:
-    return render(request, 'blog/index.html')
+    context = {
+        'title': 'blog',
+        'subtitle': 'Selamat datang di Blog saya',
+        'content': 'ini adalah halaman index blog',
+    }
+    return render(request, 'blog/index.html', context)
 
 
 def about(request):
-    return render(request, 'blog/about.html')
+    context = {
+        'title': 'about',
+        'subtitle': 'Selamat datang about di Blog saya',
+        'content': 'ini adalah halaman about blog',
+    }
+    return render(request, 'blog/index.html', context)
