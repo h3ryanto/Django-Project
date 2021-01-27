@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
+    return HttpResponse("Hello World! ini adalah halaman index")
 
 
 def about(request):
