@@ -3,8 +3,14 @@ from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse("Hello World! ini adalah halaman index")
-
-
-def about(request):
-    return HttpResponse("Hello World! ini adalah halaman about")
+    context = {
+        'judul': 'Django-Project',
+        'subjudul': 'selamat datang di Blog Django Project',
+        'nav': [
+            ['/', 'Home'],
+            ['/blog', 'Blog'],
+            ['/about', 'About'],
+            ['/contact', 'Contact']
+        ]
+    }
+    return render(request, 'index.html', context)
