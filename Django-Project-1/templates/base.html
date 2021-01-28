@@ -1,33 +1,42 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-	<!DOCTYPE html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{judul}}</title>
-		{% include "snippets/styles.html" %}
-    </head>
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{judul}}</title>
+	{% include "snippets/styles.html" %}
+</head>
+
 <body>
 	<div class="container-md">
-	{% include "snippets/navbar.html" %}
-	
-    
-    {% block header %}
-	    	
-    {% endblock header %}
+		{% include "snippets/navbar.html" %}
 
-	{% block content-1 %}
-				
-	{% endblock content-1 %}
 
-	{% for profil in Profil %}
+		{% block header %}
+
+		{% endblock header %}
+
+		{% block content-1 %}
+
+		{% endblock content-1 %}
+
+		{% for profil in Profil %}
 		<h3>{{profil.nama}}</h3>
 		<p>{{profil.alamat}}</p>
-	{% endfor %}
-</div>
+		{% endfor %}
+	</div>
 
-{% include "snippets/scripts.html" %}
+<script src="{% static "vendor/jquery/jquery.js" %}" type="text/javascript"></script>
+	
+<script src="{% static "vendor/popper/popper.js" %}" type="text/javascript"></script>
+
+<script src="{% static "vendor/bootstrap/js/bootstrap.js" %}" type="text/javascript"></script>
+
+<script src="{% static "js/scrolling.js" %}" type="text/javascript"></script>       
 
 </body>
+
 </html>

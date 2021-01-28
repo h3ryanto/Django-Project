@@ -1,25 +1,24 @@
 {% load static %}
-  
-   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <!-- Brand/logo -->
-        <a class="navbar-brand" href="#">{{judul}}</a>
 
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">{{judul}}</a>
 
-        <!-- Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-          {% for link,name in nav%}
-          <li class="nav-item">
-            <a class="nav-link" href=" {{link}} " title="">{{name}}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      </nav>
-   
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav">
+      {% for link,name in nav%}
+      <li class="na-item">
+        <a class="nav-link" href=" {{link}} " title="">{{name}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 
+</nav>
