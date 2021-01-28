@@ -5,11 +5,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{{subjudul}}</title>
+		<title>{{judul}}</title>
+		{% include "snippets/styles.html" %}
     </head>
 <body>
-    
+	<div class="container-md">
 	{% include "snippets/navbar.html" %}
+	
     
     {% block header %}
 	    	
@@ -23,6 +25,9 @@
 		<h3>{{profil.nama}}</h3>
 		<p>{{profil.alamat}}</p>
 	{% endfor %}
+</div>
+
+{% include "snippets/scripts.html" %}
 
 </body>
 </html>

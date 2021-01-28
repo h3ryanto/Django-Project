@@ -1,10 +1,25 @@
+{% load static %}
+  
+   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">{{judul}}</a>
 
-<ul>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    {% for link,name in nav%}
-        <li>
-            <a href=" {{link}} " title="">{{name}}</a>
-        </li>
-    {% endfor %}
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+          {% for link,name in nav%}
+          <li class="nav-item">
+            <a class="nav-link" href=" {{link}} " title="">{{name}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
 
-</ul>
+      </nav>
+   
+

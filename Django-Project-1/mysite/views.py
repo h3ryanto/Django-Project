@@ -8,7 +8,7 @@ def index(request):
     profil = Profil.objects.all
     context = {
         'judul': 'Django-Project',
-        'subjudul': 'selamat datang di Blog Django Project',
+        'subjudul': 'Selamat datang di Blog Django Project',
         'Profil': profil,
         'nav': [
             ['/', 'Home'],
