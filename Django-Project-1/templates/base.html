@@ -12,21 +12,21 @@
 
 <body>
 	<div class="container-md">
-		{% include "snippets/navbar.html" %}
+		<!-- {% include "snippets/navbar.html" %} -->
 
 
 		{% block header %}
 
 		{% endblock header %}
 
-		{% block content-1 %}
+		{% block content %}
 
-		{% endblock content-1 %}
+		{% endblock content %}
 
-		{% for profil in Profil %}
+		<!-- {% for profil in Profil %}
 		<h3>{{profil.nama}}</h3>
 		<p>{{profil.alamat}}</p>
-		{% endfor %}
+		{% endfor %} -->
 	</div>
 
 	{% include "snippets/scripts.html" %}

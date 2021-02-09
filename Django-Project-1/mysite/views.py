@@ -1,21 +1,16 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-
-from blog.models import Profil
-
+from .form import login
 
 def index(request):
-    profil = Profil.objects.all
-    context = {
-        'judul': 'Django-Project',
-        'subjudul': 'Selamat datang di Blog Django Project',
-        'Profil': profil,
-        'nav': [
-            ['/', 'Home'],
-            ['/blog', 'Blog'],
-            ['/about', 'About'],
-            ['/contact', 'Contact'],
-
-        ]
+    form_login = login()
+    context ={
+            'form': form_login,
     }
-    return render(request, 'index.html', context)
+    
+  
+    if request.method == 'POST': 
+	    print(request.POST)
+
+    return render(request,'index.html', context)
+
+
