@@ -1,0 +1,8 @@
+{% block header %}
+ <a href="{% url 'logoutView' %}">{{ link }}</a>
+
+<h1>Selamat datang ini adalah halaman utama.</h1>
+<h3>Halo: {{user}}</h3>
+
+<a href="{% url 'inventory:index' %}">{{ inventory }}</a>
+{% endblock header %}
